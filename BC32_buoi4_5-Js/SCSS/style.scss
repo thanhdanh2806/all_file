@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import "variables";
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.title {
+  // Sử dụng biến thay cho mã màu
+  color: $color-red;
+  background-color: $color-green;
+}
+
+.heading {
+  color: $color-blue;
+  background-color: $color-red;
+}
+
+.container {
+  max-width: $container-width;
+}
+
+// nested selector (selecter lồng nhau)
+// .box .title {
+//   color: $color-green;
+//   background-color: $color-blue;
+// }
+// .box .heading {
+//   color: $color-blue;
+//   background-color: $color-green;
+// }
+
+.box {
+  .title {
+    color: $color-green;
+    background-color: $color-blue;
+  }
+
+  .heading {
+    color: $color-blue;
+    background-color: $color-green;
+  }
+}
+
+// CSS:
+// - thẻ a trong ul > li có color-green
+// - thẻ a trong ul > li.active có color-red
+
+.list {
+  list-style: none;
+  .list-item {
+    a {
+      font-size: $fs-lg;
+      color: $color-green;
+    }
+    // &: đại diện cho class đang bọc lấy nó
+    // &.active => .list-item.active
+    &.active {
+      a {
+        color: $color-red;
+      }
+    }
+  }
+}
+
+// Mixin (khái niệm tương đương với hàm)
+// Khai báo mixin: @mixin
+@mixin alertStyle($color-bg, $color-border) {
+  background-color: $color-bg;
+  border-color: $color-border;
+}
+
+.alert {
+  width: $container-width;
+  border-radius: 8px;
+  border: 1px solid;
+
+  &:hover {
+    filter: brightness(0.75);
+  }
+
+  // &::before {}
+  // &::after {}
+
+  &-success {
+    // background-color: $color-green;
+    // border-color: $color-green;
+
+    // Sử dụng mixin: @include
+    @include alertStyle($color-green, $color-green);
+  }
+
+  &-danger {
+    // background-color: $color-red;
+    // border-color: $color-red;
+    @include alertStyle($color-red, $color-red);
+  }
+}
+
+@mixin btnStyle($color-text, $color-bg, $color-border) {
+  color: $color-text;
+  background-color: $color-bg;
+  border-color: $color-border;
+}
+
+$color-white: #fff;
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 20px;
+
+  &-primary {
+    @include btnStyle($color-white, $color-blue, $color-blue);
+  }
+
+  &-success {
+    @include btnStyle($color-white, $color-green, $color-green);
+  }
+}
+
+// extends
+.content {
+  background-color: $color-white;
+  color: $color-red;
+  border: 1px solid $color-red;
+}
+
+.article {
+  @extend .content;
+  padding: 25px;
+}
+
+// value: list - cho phép lưu trữ biến với một danh sách các giá trị
+$sizes: 20, 30, 50;
+
+// each
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: #{$size}px;
+  }
+}
+// => icon-20 { font-size: 20px }
+
+$paddings: 0, 1, 2, 3, 4, 5;
+
+@each $padding in $paddings {
+  .p-#{$padding} {
+    padding: #{$padding}rem;
+  }
+}
+
+// map - lưu trữ danh sách theo dạng key - value
+$colors: (
+  "primary": "#0d6efd",
+  "secondary": "#6c757d",
+  "success": "#198754",
+  "warning": "#ffc107",
+  "danger": "#dc3545",
+);
+
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value;
+  }
+
+  .bg-#{$key} {
+    background-color: $value;
+  }
+}
+
+// if - else
+@mixin avatar($size, $circle: false) {
+  width: $size;
+  height: $size;
+
+  // Kiểm tra nếu biến circle truyền vào là true
+  // thêm thuộc tính border-radius
+  @if $circle {
+    border-radius: $size / 2;
+  }
+}
+
+.avatar-square {
+  @include avatar(20px);
+}
+.avatar-circle {
+  @include avatar(20px, true);
+}
+
+$light-color: #333;
+$light-bg: #fff;
+
+$black-color: #fff;
+$black-bg: #345;
+
+@mixin theme-color($light-theme: true) {
+  @if $light-theme {
+    color: $light-color;
+    background-color: $light-bg;
+  } @else {
+    color: $black-color;
+    background-color: $black-bg;
+  }
+}
+
+body {
+  // default sẽ là light theme
+  @include theme-color();
+  &.dark {
+    @include theme-color(false);
+  }
+}

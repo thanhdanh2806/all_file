@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=Roboto:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.thea, nav .container ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: small;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.canhggiua, .AllAboutUs .container .AboutUs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg, .AllAboutUs .container .ImgTalkUs, .bgAboutUs, .bgHeader {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.bgHeader {
+  background-image: url(./images/yellow_top_wave_01.png);
+  height: 14rem;
+  position: relative;
+  max-width: 100rem;
+}
+
+nav {
+  background-color: rgba(182, 25, 25, 0);
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+}
+nav .container {
+  max-width: 1258px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+nav .container .check-box {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.3 ease;
+}
+nav .container .check-box:checked ~ .menu-bar span::before {
+  transform: rotate(90deg);
+}
+nav .container .check-box:checked ~ .menu-bar span::after {
+  transform: rotate(-90deg);
+}
+nav .container .check-box:checked ~ .menu-bar span {
+  transform: rotate(135deg);
+}
+nav .container .check-box:checked ~ ul {
+  left: 0;
+}
+nav .container .check-box:checked ~ .call {
+  left: 0;
+}
+nav .container .menu-bar {
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+}
+nav .container .menu-bar span {
+  position: relative;
+  height: 3px;
+  width: 100%;
+  display: block;
+  background-color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+nav .container .menu-bar span::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-10px);
+}
+nav .container .menu-bar span::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: translateY(10px);
+}
+nav .container .logo img {
+  height: 80px;
+  width: 80px;
+}
+nav .container ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-left: 16rem;
+}
+nav .container ul li {
+  padding: 6px 20px;
+  transition: all 0.3s ease;
+}
+nav .container ul li a:hover {
+  color: #b61984;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+nav .container .call {
+  padding-top: 12px;
+  width: 25rem;
+  height: 5rem;
+  transition: all 0.3s ease;
+}
+nav .container .call .call-number {
+  background-color: #b61984;
+  width: 10rem;
+  height: 40px;
+  border-radius: 50px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+nav .container .call .call-number i {
+  margin-top: 13px;
+  color: rgb(255, 255, 255);
+  padding-left: 15px;
+  float: left;
+  font-size: small;
+}
+nav .container .call .call-number p {
+  font-size: smaller;
+  padding-left: 2rem;
+  padding-top: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+nav .container .call .icon {
+  margin-top: 11px;
+}
+nav .container .call .icon i {
+  margin: 0 5px;
+  font-size: small;
+}
+
+@media (max-width: 767px) {
+  ul {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 80px;
+    background-color: rgb(255, 255, 255);
+    left: -100%;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  ul li {
+    margin-top: 20px;
+  }
+  .menu-bar {
+    display: flex !important;
+  }
+  .call {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 30rem;
+    left: -100%;
+  }
+  .call .call-number {
+    left: 0;
+  }
+}
+.bgAboutUs {
+  background-image: url(./images/Violet_top_left_wave.png);
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  top: 10rem;
+}
+
+.AllAboutUs {
+  top: 80px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.AllAboutUs .container .AboutUs #language a {
+  font-size: 57px;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 700;
+}
+.AllAboutUs .container .ImgTalkUs {
+  height: 580px;
+  width: 580px;
+  background-image: url(./images/hero_team.png);
+}/*# sourceMappingURL=index.css.map */

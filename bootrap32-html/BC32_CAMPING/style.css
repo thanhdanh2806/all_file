@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#header{
+    background-color: #f8e1db;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 0;
+    padding-left: 0;
+}
+#header .logo{
+    margin-left: 30px;
+}
+
+#header .menu {
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+#header .menu li{
+    display: inline;
+    margin-right: 10px;
+}
+
+#header .menu li a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Carousel */
+
+#carousel{
+    background: url("./Image/BG.png");
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Acivities */
+
+#activities{
+    background-color: #faf4f2;
+    /* padding-top: 100px;
+    padding-bottom: 100px; */
+    padding: 100px 0;
+}
+
+#activities .title {
+    text-align: center;
+    color: gray;
+}
+
+.list-activities{
+    margin-top:  50px;
+}
+
+.list-activities .item{
+    float: left;
+    width: 25%;
+    padding: 20px;
+}
+
+.list-activities .item .text{
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.list-activities .img_thumb img{
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.list-activities .img_thumb{
+    position: relative;
+}
+
+.list-activities .img_thumb i{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: red;
+    font-size: 25px;
+    width: 50px;
+    line-height: 50px;
+    height: 50px;
+    background-color: #ffffff5e;
+    border-radius: 10px;
+}
+
+.list-activities .item .text h3{
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.list-activities .item .text p{
+    margin-bottom: 20px;
+    color: gray;
+}
+
+.list-activities .item .text button{
+    border: none;
+    padding: 20px 60px;
+    border-radius: 40px;
+    color: gray;
+}
+.clear {
+    clear: both;
+}
+
+.view-all{
+    text-align: center;
+}
+
+.btn-view-all {
+    background-color: transparent;
+    border: 1px solid orange;
+    padding: 15px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+/* contact */
+
+#contact{
+    padding-bottom: 400px;
+}
+.contact_left {
+ float: left;
+ width: 50%;
+ background-color: #f8e1db;
+ padding-top: 10px;
+ background-image: url(./Image/mask.png);
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+
+}
+
+.contact_right {
+    float: left;
+    width: 50%;
+    color: gray;
+    background-color: #f8e1db;
+    padding: 79px 0;
+}
+
+.contact_right p{
+    padding-top: 10px;
+
+}
+
+.contact_right .download{
+    float: left;
+    color: gray;
+    padding-top: 30px;
+}
+
+.contact_right .download img{
+    padding-top: 20px;
+    padding-right: 2px;
+    right: 20px;
+    width: 50%;
+    float: left;
+}
+
+.contact_right .follow{
+    float: left;
+    width: 50%;
+    color: gray;
+    padding-top: 30px;
+}
+
+.contact_right .follow i{
+    color: red;
+    padding-top: 20px;
+}
+
+    /* Footer */
+
+#footer {
+    background-color:#f8e1db ;
+    border-radius: 20px;
+    padding:40px 0;
+    margin-top: 50px;
+}
+
+.footer_layout{
+    background-color: #f8e1db;
+}
+
+.boss_none{
+    list-style: none;
+} 
+
+
+.boss_1 {
+    float: left;
+    width: 40%;
+    padding: 20px;
+    background-color:#f8e1db;
+    border-top-left-radius: 20px;
+}
+
+.boss_1 ul {
+    padding: 15px 0;
+    line-height: 30px;
+}
+
+.boss_1 b{
+    width: 100%;
+}
+
+.boss_2 {
+    float: left;
+    width: 20%;
+    background-color:#f8e1db;
+    padding: 0px 50px;
+}
+
+li{
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.boss_2 .tired{
+    padding: 20px 0;
+}
+
+.boss_2 .tired .list li {
+    font-size: 15px;
+}
+
+.tired p{
+    font-size: 10px;
+}
+
+.end {
+    padding-top: 10px;
+    text-align: center;
+}

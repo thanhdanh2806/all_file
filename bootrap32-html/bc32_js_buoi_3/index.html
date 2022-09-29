@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Tính tổng</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label>Number 1</label>
+                <input id="number1" type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Number 2</label>
+                <input id="number2" type="number" class="form-control" />
+              </div>
+              <button class="btn btn-success" onclick="tong()">Tổng</button>
+            </div>
+            <div id="showInfoTotal" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <button class="btn btn-info" id="btnTaoThe">Tạo thẻ</button>
+    <div id="divContent"></div>
+
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Tính tiền tip</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label>Tổng tiền thanh toán?</label>
+                <input
+                  id="tongTienThanhToan"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label>Phần trăm tip?</label>
+                <select class="form-control" id="phanTramTip">
+                  <option value="30">30%</option>
+                  <option value="20">20%</option>
+                  <option value="10">10%</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Muốn share mấy người?</label>
+                <input id="share" type="number" class="form-control" />
+              </div>
+              <button id="btnTinhNao" class="btn btn-danger">Tính Nào</button>
+            </div>
+            <div id="showInfoTip" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Movie</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label>Tên Phim</label>
+                <input id="tenPhim" type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Giá vé người lớn</label>
+                <input id="giaVeNL" type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>SL vé người lớn</label>
+                <input id="slVeNL" type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Giá vé trẻ em</label>
+                <input id="giaVeTE" type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>SL vé trẻ em</label>
+                <input id="slVeTE" type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Phần trăm từ thiện</label>
+                <select id="phanTramTT" class="form-control">
+                  <option value="30">30%</option>
+                  <option value="20">20%</option>
+                  <option value="10">10%</option>
+                </select>
+              </div>
+              <button class="btn btn-danger" id="btnSubmit">Submit</button>
+            </div>
+            <div id="showInfoMovie" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

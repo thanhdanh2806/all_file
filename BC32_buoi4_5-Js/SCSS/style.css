@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.title {
+  color: rgb(219, 23, 23);
+  background-color: rgb(13, 162, 13);
+}
+
+.heading {
+  color: rgb(17, 17, 222);
+  background-color: rgb(219, 23, 23);
+}
+
+.container {
+  max-width: 1280px;
+}
+
+.box .title {
+  color: rgb(13, 162, 13);
+  background-color: rgb(17, 17, 222);
+}
+.box .heading {
+  color: rgb(17, 17, 222);
+  background-color: rgb(13, 162, 13);
+}
+
+.list {
+  list-style: none;
+}
+.list .list-item a {
+  font-size: 35px;
+  color: rgb(13, 162, 13);
+}
+.list .list-item.active a {
+  color: rgb(219, 23, 23);
+}
+
+.alert {
+  width: 1280px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+.alert:hover {
+  filter: brightness(0.75);
+}
+.alert-success {
+  background-color: rgb(13, 162, 13);
+  border-color: rgb(13, 162, 13);
+}
+.alert-danger {
+  background-color: rgb(219, 23, 23);
+  border-color: rgb(219, 23, 23);
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 20px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: rgb(17, 17, 222);
+  border-color: rgb(17, 17, 222);
+}
+.btn-success {
+  color: #fff;
+  background-color: rgb(13, 162, 13);
+  border-color: rgb(13, 162, 13);
+}
+
+.content, .article {
+  background-color: #fff;
+  color: rgb(219, 23, 23);
+  border: 1px solid rgb(219, 23, 23);
+}
+
+.article {
+  padding: 25px;
+}
+
+.icon-20 {
+  font-size: 20px;
+}
+
+.icon-30 {
+  font-size: 30px;
+}
+
+.icon-50 {
+  font-size: 50px;
+}
+
+.p-0 {
+  padding: 0rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.text-primary {
+  color: "#0d6efd";
+}
+
+.bg-primary {
+  background-color: "#0d6efd";
+}
+
+.text-secondary {
+  color: "#6c757d";
+}
+
+.bg-secondary {
+  background-color: "#6c757d";
+}
+
+.text-success {
+  color: "#198754";
+}
+
+.bg-success {
+  background-color: "#198754";
+}
+
+.text-warning {
+  color: "#ffc107";
+}
+
+.bg-warning {
+  background-color: "#ffc107";
+}
+
+.text-danger {
+  color: "#dc3545";
+}
+
+.bg-danger {
+  background-color: "#dc3545";
+}
+
+.avatar-square {
+  width: 20px;
+  height: 20px;
+}
+
+.avatar-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+body {
+  color: #333;
+  background-color: #fff;
+}
+body.dark {
+  color: #fff;
+  background-color: #345;
+}/*# sourceMappingURL=style.css.map */

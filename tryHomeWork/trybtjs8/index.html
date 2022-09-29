@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>btjsbuoi8</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <form class="row gy-3 align-items-center py-3">
+        <div class="col-12 col-lg-6">
+            <input type="number" class="form-control form__input" id="inputNum" placeholder="Nhập số n">
+        </div>
+        <div class="col-12 col-lg-6">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="getNumber()">Thêm
+                số</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtArray"></span>
+        </div>
+    </form>
+
+    <form class="row gy-3 align-items-center px-2">
+        <h2> 1 tổng số dương </h2>
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="sumPositive()">Tính tổng</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtSum"></span>
+        </div>
+    </form>
+
+    <form class="row gy-3 align-items-center px-2">
+        <h2> 2 đếm số dương </h2>
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="countPositive()">Đếm số</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtCount"></span>
+        </div>
+    </form>
+
+    <form class="row gy-3 align-items-center px-2">
+        <h2> 3 tìm số nhỏ nhất</h2>
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="findMin()">Tìm số nhỏ nhất</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtMin"></span>
+        </div>
+    </form>
+
+    <form class="row gy-3 align-items-center px-2">
+        <h2> 4 tìm số dương nhỏ nhất </h2>
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="findMinPos()">Tìm số dương nhỏ nhất</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtMinPos"></span>
+        </div>
+    </form>
+
+    <form class="row gy-3 align-items-center px-2">
+        <h2> 5 tìm số chẵn</h2>
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="findEven()">Tìm số chẵn</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtEven"></span>
+        </div>
+    </form>
+
+    <form class="row gy-3 align-items-center px-2">
+        <h2> 6 đổi chổ</h2>
+        <div class="col-12 col-lg-6">
+            <input type="number" class="form-control form__input" id="inputIndex1" placeholder="Nhập số vị trí 1">
+        </div>
+        <div class="col-12 col-lg-6">
+            <input type="number" class="form-control form__input" id="inputIndex2" placeholder="Nhập số vị trí 2">
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="changePosition()">Đổi chỗ</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtChangePos"></span>
+        </div>
+    </form>
+
+    <form class="row gy-3 align-items-center px-2">
+        <h2> 7 sắp xếp tăng dần </h2>                                               
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="sortIncrease()">Sắp xếp</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtIncrease"></span>
+        </div>
+    </form>
+
+    <form class="row gy-3 align-items-center px-2">
+        <h2> 8 tìm số nguyên </h2>                                             
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="findPrime()">Tìm số nguyên tố</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtPrime"></span>
+        </div>
+    </form>
+
+    <form class="row gy-3 align-items-center py-3">
+        <h2> 9 đếm số nguyên </h2>
+        <div class="col-12 col-lg-6">
+            <input type="number" class="form-control form__input" id="inputFloat" placeholder="Nhập số">
+        </div>
+        <div class="col-12 col-lg-6">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="getFloat()">Thêm
+                số</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtArrayFloat"></span>
+        </div> 
+        <div class="col-12 col-lg-6">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="findInt()">Đếm số nguyên</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtInt"></span>
+        </div>
+    </form>
+
+    <form class="row gy-3 align-items-center px-2">  
+        <h2> 10 so sánh </h2>                                             
+        <div class="col-12">
+            <button class="btn btn-primary me-1 mb-1" type="button" onclick="compareNum()">So sánh</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+            👉<span id="txtCompare"></span>
+        </div>
+    </form>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
